@@ -1,0 +1,180 @@
+
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <com.google.android.material.imageview.ShapeableImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_item_image"
+            android:layout_marginEnd="16dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_babybuy_logo"
+            app:shapeAppearanceOverlay="@style/circularImageView" />
+
+        <TextView
+            android:id="@+id/tv_greetings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Welcome to Baby buy"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:textColor="#535353"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/iv_notification"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_notification"
+            android:layout_gravity="end"
+        />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prepare for your little one"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="left"
+        android:layout_marginBottom="14dp"
+        android:textColor="#2B2B2B"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width = "match_parent"
+        android:layout_height="42dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/rounded_search"
+        android:hint="Search"
+        android:inputType="text"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+
+    <!-- Explore Heading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommendations"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="left"
+        android:layout_marginBottom="16dp"
+        android:textColor="#2B2B2B"
+        tools:ignore="HardcodedText" />
+
+    <!-- Explore Places -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <include layout="@layout/category_layout" />
+            <include layout="@layout/category_layout1" />
+            <include layout="@layout/category_layout2" />
+            <include layout="@layout/category_layout3" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    // Top Trip
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Container 1 -->
+            <include layout="@layout/baby_maternity_pillow" />
+
+            <!-- Container 2 -->
+            <include layout="@layout/baby_toys1" />
+
+            <!-- Container 3 -->
+            <include layout="@layout/baby_dipers" />
+
+            <!-- Container 4 -->
+            <include layout="@layout/baby_raye_bibs" />
+
+            <!-- Container 5 -->
+            <include layout="@layout/baby_essentials" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="left"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp"
+        android:textColor="#2B2B2B"
+        tools:ignore="HardcodedText" />
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <include layout="@layout/baby_food" />
+            <include layout="@layout/baby_cloths" />
+            <include layout="@layout/baby_footwear" />
+            <include layout="@layout/baby_toys" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>
+</ScrollView>
+
